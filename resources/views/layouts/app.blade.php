@@ -12,7 +12,7 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-       
+        <link rel="stylesheet" href="{{ asset('css/resepku.css') }}">
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
         
@@ -21,7 +21,7 @@
         <div>
              <!--Navbar-->
             <header  >
-                <nav class = "navbar  shadow-lg navbar-expand-lg navbar-light " id="header" >
+                <nav class = "navbar  shadow-lg navbar-expand-lg navbar-light header-resep"  >
                     <div class = "container">
                         <a class="navbar-brand" href="" id = "brand">Resepku</a>
                         <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#myNav" aria-controls="myNav" aria-expanded="false" aria-label="Toggle navigation" >
@@ -34,10 +34,10 @@
                                 <li class="nav-item">
                                     <form method="POST" action="{{ route('logout') }}">
                                         @csrf
-                                        <x-nav-link :href="route('logout')"
+                                        <a :href="route('logout')"
                                         onclick="event.preventDefault();
-                                                    this.closest('form').submit();">
-                                        {{ __('Log Out') }}</x-nav-link>
+                                                    this.closest('form').submit();" id="menu">
+                                        {{ __('Log Out') }}</a>
                                     </form> 
                                 </li>   
                         
@@ -52,7 +52,7 @@
                 {{ $slot }}
             </main>
 
-            <footer style="background-color:rgb(173, 172, 172)"> 
+            <footer > 
                 <h5 class="text-center py-4">Made by Farzana Hadifa</h5>
             </footer>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
