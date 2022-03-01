@@ -22,4 +22,7 @@ Route::get('/tulis-resep', [ResepController::class, 'create'])
 Route::post('/resep', [ResepController::class, 'store']) 
 ->middleware(['auth']);
 
+Route::get('/resep-detail/{id}', [ResepController::class, 'show']) 
+->middleware(['auth'])->name('detail');
+
 require __DIR__.'/auth.php';

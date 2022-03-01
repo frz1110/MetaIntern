@@ -69,9 +69,9 @@ class ResepController extends Controller
      * @param  \App\Models\Resep  $resep
      * @return \Illuminate\Http\Response
      */
-    public function show(Resep $resep)
+    public function show($id)
     {
-        return Resep::find($resep);
+        return view('detail', ['resep' => Resep::find($id)]);
     }
 
     /**
