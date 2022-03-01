@@ -19,7 +19,20 @@ class ResepSeeder extends Seeder
         //
         $faker = Faker::create('id_ID');
  
-    	for($i = 1; $i <= 20; $i++){
+    // insert data ke table pegawai menggunakan Faker
+        DB::table('users')->insert([
+            'name' => "Farzana",
+            'email' => "user1@gmail.com",
+            'password' => "farzana345"
+        ]);
+
+        DB::table('users')->insert([
+            'name' => "Hadifa",
+            'email' => "user2@gmail.com",
+            'password' => "farzana345"
+        ]);
+
+    	for($i = 1; $i <= 10; $i++){
  
     	      // insert data ke table pegawai menggunakan Faker
     		DB::table('resep')->insert([

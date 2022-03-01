@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ResepController;
-use App\Http\Controllers\Auth\RegisteredUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +13,6 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/register', [RegisteredUserController::class, 'create'])
-                ->middleware('guest')
-                ->name('register');
-
-Route::post('/register', [RegisteredUserController::class, 'store'])
-                ->middleware('guest');
-
 Route::get('/', [ResepController::class, 'index']) 
 ->middleware(['auth'])->name('dashboard');
 

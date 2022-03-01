@@ -23,12 +23,12 @@ class IsiSeeder extends Seeder
     	      // insert data ke table pegawai menggunakan Faker
     		DB::table('bahan')->insert([
     			'nama' => $faker->word,
-    			'resep' => $faker->numberBetween(1,17),	
+    			'resep' => $faker->numberBetween(1,8),	
     		]);
 
             DB::table('langkah')->insert([
     			'nama' => $faker->text($maxNbChars = 100),
-    			'resep' => $faker->numberBetween(1,17),	
+    			'resep' => $faker->numberBetween(1,8),	
     		]);
     }
 }
